@@ -1,12 +1,25 @@
+package  Clock
+
 class Clock {
-    private var hour = 0
-    private var minute = 0
-    private var second = 0
+    private var Hour = 0
+    private var Minute = 0
+    private var Second = 0
 
     fun defaultClock() {
-        hour = 0
-        minute = 0
-        second = 0
+        Hour = 0
+        Minute = 0
+        Second = 0
+        val time = ("$Hour:$Minute:$Second")
     }
 
+    constructor (hour: Int, minute: Int, second: Int) {
+        this.Hour = hour
+        this.Minute = minute
+        this.Second = second
+    }
+
+    fun add(hour: Int, minute: Int, second: Int) {
+        this.Second = second + 1
+        println("$hour:$minute:$second")
+    }
 }
