@@ -1,7 +1,7 @@
 class Clock {
-    private var hour: Int = 0
-    private var minute: Int = 0
-    private var second: Int = 0
+    var hour: Int = 0
+    var minute: Int = 0
+    var second: Int = 0
 
     constructor(hour: Int, minute: Int, second: Int) {
         this.hour = hour
@@ -9,7 +9,7 @@ class Clock {
         this.second = second
     }
 
-    fun ResetClock() {
+    fun resetClock() {
         hour = 0
         minute = 0
         second = 0

@@ -8,8 +8,40 @@
 
 fun main() {
     val clock = Clock(0,0,0)
-    clock.displayTime()
-    while (){
+    var option = ""
 
+    while (option != "q") {
+        println("Current time: ${clock.displayTime()}")
+        println("Enter 's' to set the time.")
+        println("Enter 'a' to advance one second.")
+        println("Enter 'r' to reset the clock.")
+        println("Enter 'q' to quit")
+        option = readln()
+
+        when (option) {
+            "s" -> {
+                print("Enter hour (0-23): ")
+                val h = readln().toInt()
+                print("Enter minute(s) (0-59): ")
+                val m = readln().toInt()
+                print("Enter second(s) (0-59): ")
+                val s = readln().toInt()
+                clock.hour = h
+                clock.minute = m
+                clock.second = s
+            }
+            "a" -> {
+                clock.addOneSecond()
+            }
+            "r" -> {
+                clock.resetClock()
+            }
+            "q" -> {
+                println("Goodbye!")
+            }
+            else -> {
+                println("Invalid option.")
+            }
+        }
     }
 }
