@@ -7,5 +7,9 @@
     */
 
 fun main() {
+    val clock = Clock(0,0,0)
+    clock.displayTime()
+    while (){
 
+    }
 }
